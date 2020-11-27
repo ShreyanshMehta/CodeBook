@@ -461,7 +461,7 @@ $app->get('/logout', function($request, $response){
             $arr['isLoggedin'] = 1;
             $arr['username'] = $_SESSION['user_id'];
         }
-        header("Location: http://codebook1106.000webhostapp.com/");
+        header("Location: http://codebook1106.000webhostapp.com");
         die();
     }
     else{
