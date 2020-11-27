@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+
+    {% block head %}{% endblock %}
+
+    <link rel="stylesheet" href="{{ base_url() }}/styles/layout.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav style="z-index: 500;">
+        <ul class="menu">
+            <li class="logo"><a href="{{ base_url() }}/">&lsaquo;/ CodeBook &rsaquo;</a></li>
+            <li class="item"><a href="{{ base_url() }}/">Tags</a></li>
+            {% if isLoggedin %}
+            <li class="item"><a href="{{ base_url() }}/privateTag">Private-Tags</a></li>
+            {% endif %}
+            <li class="item"><a href="{{ base_url() }}/search">Search</a></li>
+            <li class="item"><a href="https://codechef.com/contests">Compete</a></li>
+            {% if isLoggedin %}
+            <li class='item' style="color:red; font-size: 18px; ">Hello, {{username}}</li>
+            <li class="item button"><a href="{{ base_url() }}/logout">Logout</a></li>
+            {% else %}
+            <li class="item button"><a href="{{ base_url() }}/login">Log In</a></li>
+            <li class="item button secondary"><a href="{{ base_url() }}/signup">Sign Up</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div id='base_url' style="display: none;">{{ base_url() }}</div>
+    {% block content %} {% endblock %}
+</body>
+
+</html>

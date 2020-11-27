@@ -1,0 +1,31 @@
+{% extends 'layout.html' %} {% block title %}Login{% endblock %} {% block head %}
+<link rel="stylesheet" href="{{ base_url() }}/styles/signup.css">{% endblock %} {% block content %}
+<div class="container" style="margin-top: 90px;">
+    <div class="header" style="text-align: center">
+        <h2>Login</h2>
+    </div>
+    <form id="form" class="form">
+        <div class="form-control">
+            <label for="user_id">Username</label>
+            <input type="text" placeholder="florinpop17" id="username" required/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="pass">Password</label>
+            <input type="password" placeholder="Password" id="password" required/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <div class='form-control'>
+            <button id='signup-btn'>Login</button>
+            <small class='reg-success' style="width: 100%; text-align: center; color: red; visibility: hidden;">Error message</small>
+        </div>
+    </form>
+</div>
+
+<script src="{{ base_url() }}/scripts/login.js"></script>
+
+{% endblock %}
