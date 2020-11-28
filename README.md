@@ -18,6 +18,7 @@ This is a project based on Codechef Summer Intern Round - 2 (Hackathon).
 * User can visit the problem statement on Codechef by just clicking the question code in the given table.
 * Various details such as number of attempts, successful submission and accuracy is also shown for each question in the table.
 * User can search question via tags using search bar. Multiple tag search is also available in the search bar.
+* This project has a very simple UI and easy to use.
 ### Some addition features for Authorised Users:
 * An authorised user can add his private tag on a particular question. Those private tag will be accessible and seen only by the user himself.
 * There is a separate section for private tag so that he can access them easy and efficiently.
